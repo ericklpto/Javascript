@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+	<title>Sistema de Calculo IMC</title>
+	<meta charset="utf-8">
+</head>
+	<body>
+		<h1>Calculando IMC</h1>
+
+	<div>
+		<script>
+			var numalunos = prompt ("Digite a quantidade de Alunos: ");
+			
+		while (numalunos > 0){
+			var nome = prompt ("Digite o nome: ");
+			var idade = prompt ("Digite sua idade: ");
+			var altura = prompt ("Digite sua altura: ");
+			var peso = prompt ("Digite seu peso: ");
+
+			var imc = peso / altura^2;
+
+			if (imc < 18.5){
+				alert ("Classificação: Magreza !");
+				document.writeln ("Obesidade: Grau 0");
+			} if ( imc > 18.5 || imc < 24.9){
+				document.writeln ("Classificação Normal");
+				document.writeln ("Obesidade: Grau 0 "+ imc);
+			} if ( imc > 25.0 || imc < 29.9){
+				document.writeln ("Classificação: Sobrepeso");
+				document.writeln ("Obesidade: Grau 1 " + imc);
+			} if (imc > 30.0 || imc < 39.9){
+				document.writeln ("Classificação: Obesidade");
+				document.writeln ("Obesidade: Grau 2" + imc);
+			} if (imc > 40.0) {
+				alert ("Classificação: Obesidade Grave");
+				document.writeln ("Obesidade: Grau 3 " + imc);
+			}
+
+			numalunos = numalunos - 1;
+		}
+
+		</script>
+	</div>
+	</body>
+</html>
